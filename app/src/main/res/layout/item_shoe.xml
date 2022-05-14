@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="283dp"
+    android:background="@drawable/background_item_shoe_home"
+    android:layout_margin="3dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartImageShoe"
+        android:layout_width="match_parent"
+        android:layout_height="177dp"
+        android:layout_margin="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textShoe"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="2dp">
+
+        <ImageView
+            android:id="@+id/imageShoe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/giay4"
+            android:scaleType="centerCrop"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_gravity="end">
+
+            <TextView
+                android:id="@+id/textSeeNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="0dp"
+                app:layout_constraintEnd_toStartOf="@+id/iconSee"
+                app:layout_constraintTop_toTopOf="@id/iconSee"
+                app:layout_constraintBottom_toBottomOf="@id/iconSee"
+                android:text="0"
+                android:paddingBottom="1dp"
+                android:textStyle="bold"
+                android:textSize="10dp"
+                android:textColor="@color/color_main"/>
+
+            <ImageView
+                android:id="@+id/iconSee"
+                android:layout_width="20dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_see"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/color_main" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textShoe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TÊN GIÀY"
+        android:textSize="16dp"
+        android:textColor="@color/color_main"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@id/cartImageShoe"
+        app:layout_constraintTop_toBottomOf="@id/cartImageShoe"/>
+
+    <TextView
+        android:id="@+id/textPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="@color/green"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintStart_toStartOf="@id/cartImageShoe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="₫690.000"/>
+
+    <TextView
+        android:id="@+id/textCost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/textPrice"
+        app:layout_constraintBottom_toTopOf="@id/textPrice"
+        android:textColor="@color/secondary_text_light"
+        android:textSize="13dp"
+        android:text="₫6̶̶8̶̶9̶̶.̶̶0̶̶0̶̶0̶"/>
+
+
+    <TextView
+        android:id="@+id/textSell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Đã bán 0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

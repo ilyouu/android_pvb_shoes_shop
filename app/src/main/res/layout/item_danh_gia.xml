@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingEnd="15dp"
+    android:paddingTop="15dp"
+    android:paddingBottom="10dp"
+    android:paddingStart="10dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageUser"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/aoi"
+        android:scaleType="centerCrop"
+        app:riv_oval="true"/>
+
+    <TextView
+        android:id="@+id/textUser"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/black_secondary"
+        app:layout_constraintTop_toTopOf="@id/imageUser"
+        app:layout_constraintStart_toEndOf="@id/imageUser"
+        android:text="Tên người bình luận"/>
+
+    <TextView
+        android:id="@+id/textComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColor="@color/secondary_text_dark"
+        app:layout_constraintTop_toBottomOf="@id/textUser"
+        app:layout_constraintStart_toStartOf="@id/textUser"
+        android:text="Bình luận"/>
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/textUser"
+        android:textSize="11dp"
+        android:text="Ngày bình luận"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
