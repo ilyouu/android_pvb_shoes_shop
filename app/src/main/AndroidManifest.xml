@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PvBShoesShop"
         android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SignInActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.shoes.ShoeDetailActivity"
             android:exported="false" />

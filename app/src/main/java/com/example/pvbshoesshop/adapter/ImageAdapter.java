@@ -11,7 +11,6 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.example.pvbshoesshop.R;
-import com.example.pvbshoesshop.databinding.ItemImageCarouselBinding;
 import com.example.pvbshoesshop.model.Image;
 
 import java.util.List;

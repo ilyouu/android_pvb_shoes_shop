@@ -1,7 +1,5 @@
 package com.example.pvbshoesshop.model;
 
-import java.util.Date;
-
 public class DanhGia {
     private int id_danh_gia;
     private String id_user;

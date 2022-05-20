@@ -3,6 +3,7 @@ package com.example.pvbshoesshop.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +32,7 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ShoesViewHol
     private final List<Shoes> shoesList;
     private List<KhuyenMai> khuyenMaisList;
     private Context context;
+    private PreferenceManager preferenceManager;
 
     public ShoesAdapter(List<Shoes> shoesList, List<KhuyenMai> khuyenMaisList) {
         this.shoesList = shoesList;

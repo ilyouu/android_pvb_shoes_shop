@@ -7,20 +7,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager2.widget.ViewPager2;
 
-import com.bumptech.glide.Glide;
-import com.example.pvbshoesshop.R;
 import com.example.pvbshoesshop.adapter.DanhGiaAdapter;
 import com.example.pvbshoesshop.adapter.ImageAdapter;
-import com.example.pvbshoesshop.adapter.ImageHomeAdapter;
-import com.example.pvbshoesshop.adapter.ShoesAdapter;
 import com.example.pvbshoesshop.api.ApiService;
 import com.example.pvbshoesshop.databinding.ActivityDetailShoeBinding;
 import com.example.pvbshoesshop.model.DanhGia;
 import com.example.pvbshoesshop.model.Image;
-import com.example.pvbshoesshop.model.KhuyenMai;
-import com.example.pvbshoesshop.model.Shoes;
 import com.example.pvbshoesshop.model.User;
 
 import java.text.DecimalFormat;
@@ -39,8 +32,6 @@ public class ShoeDetailActivity extends AppCompatActivity {
     private String ten_giay, ten_loai_giay, ten_thuong_hieu, mo_ta, don_gia, so_luong, hinh_anh_1, hinh_anh_2, hinh_anh_3, hinh_anh_4, ten_khuyen_mai, so_luong_mua, so_luong_xem, created_at, updated_at, tien_khuyen_mai, gia_tri_khuyen_mai;
     private List<DanhGia> listDanhGia;
     private List<User> listUser;
-
-    private ViewPager2 viewPager;
 
     private ImageAdapter imageAdapter;
 
@@ -130,6 +121,8 @@ public class ShoeDetailActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Không lấy được dữ liệu đánh giá sản phẩm!", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 
     private void getValueShoe() {

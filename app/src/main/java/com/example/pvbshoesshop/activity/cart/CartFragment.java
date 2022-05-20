@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import com.example.pvbshoesshop.R;
 import com.example.pvbshoesshop.databinding.FragmentCartBinding;
-import com.example.pvbshoesshop.databinding.FragmentUserBinding;
 
 public class CartFragment extends Fragment {
 

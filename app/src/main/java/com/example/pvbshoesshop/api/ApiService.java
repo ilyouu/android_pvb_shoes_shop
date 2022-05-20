@@ -13,8 +13,8 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
-import retrofit2.http.Query;
 
 public interface ApiService {
 
@@ -25,19 +25,22 @@ public interface ApiService {
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build().create(ApiService.class);
 
+
+
     @GET("users")
     Call<List<User>> getUsers();
 
-    @GET("users/{id}")
-    Call<User> getUser(@Path("id") int id);
+    @POST("users/create/{name}/{email}/{sdt}/{nameSign}/{pass}")
+    Call<List<User>> addUser(@Path("name") String name,
+                             @Path("email") String email,
+                             @Path("sdt") String sdt,
+                             @Path("nameSign") String nameSign,
+                             @Path("pass") String pass);
 
 
 
     @GET("cua-hang")
     Call<List<Shoes>> getShoes();
-
-    @GET("cua-hang/san-pham={id}")
-    Call<Shoes> getShoe(@Path("id") int id);
 
     @GET("cua-hang/noi-bat")
     Call<List<Shoes>> getShoesNoiBat();
@@ -45,28 +48,18 @@ public interface ApiService {
     @GET("cua-hang/moi-nhat")
     Call<List<Shoes>> getShoesMoiNhat();
 
-    @GET("cua-hang/thuong-hieu/{thuonghieu}")
-    Call<List<Shoes>> getShoesThuongHieu();
-
     @GET("cua-hang/dang-giam-gia")
     Call<List<Shoes>> getShoesDangGiamGia();
-
 
     @GET("cua-hang/{id}/update/{num}")
     Call<Shoes> updateSeeShoe(@Path("id") int id, @Path("num") int num);
 
 
+
     @GET("khuyen-mai")
     Call<List<KhuyenMai>> getKhuyenMais();
 
-    @GET("khuyen-mai/{id}")
-    Call<User> getKhuyenMai(@Path("id") int id);
 
-
-
-
-    @GET("danh-gia")
-    Call<List<DanhGia>> getDanhGias();
 
     @GET("danh-gia/{id}")
     Call<List<DanhGia>> getDanhGia(@Path("id") int id);

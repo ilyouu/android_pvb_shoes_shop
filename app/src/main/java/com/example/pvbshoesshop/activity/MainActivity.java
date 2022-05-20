@@ -4,23 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.pvbshoesshop.R;
 import com.example.pvbshoesshop.activity.cart.CartFragment;
 import com.example.pvbshoesshop.activity.home.HomeFragment;
 import com.example.pvbshoesshop.activity.shoes.ShoesFragment;
 import com.example.pvbshoesshop.activity.user.UserFragment;
-import com.example.pvbshoesshop.api.ApiService;
-import com.example.pvbshoesshop.model.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 

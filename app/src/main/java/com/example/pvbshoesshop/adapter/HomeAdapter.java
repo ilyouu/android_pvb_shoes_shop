@@ -6,13 +6,13 @@ import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.pvbshoesshop.R;
+import com.example.pvbshoesshop.activity.SignInActivity;
 import com.example.pvbshoesshop.activity.shoes.ShoeDetailActivity;
 import com.example.pvbshoesshop.api.ApiService;
 import com.example.pvbshoesshop.databinding.ItemShoeHomeBinding;
@@ -85,7 +85,6 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.GiayNoiBatView
                         break;
                     }
                 }
-
             }
 
             tienKhuyenMai = formatter.format(price - price*(giamgia / 100));
@@ -139,6 +138,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.GiayNoiBatView
 
                 intent.putExtra("gia_tri_khuyen_mai", giaTriKhuyenMai);
                 context.startActivity(intent);
+
             });
         }
 
