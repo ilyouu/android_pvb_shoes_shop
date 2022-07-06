@@ -1,5 +1,6 @@
-# android_pvb_shoes_shop
+##PvB SHOES SHOP - Android App
 
-## Android application by Phan Văn Bằng
-
-## 2022
+## Dev: Phan Văn Bằng
+###### Facebook: fb.com/it0902
+###### Github: github.com/ilyouu
+###### Email: pvbang23092002@gmail.com
